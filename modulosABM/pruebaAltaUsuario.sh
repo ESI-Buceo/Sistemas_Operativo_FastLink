@@ -28,60 +28,87 @@ case $op in
 	  		existeUsuario
 	  		if [ $? -eq 0 ]
 	  		 then
-	  			echo""
-	  			echo "EL USUARIO "$usuario" YA EXISTE"
-	  			echo ""
+	  			usuarioYaexiste
 	  		else
 	  			sudo useradd -g $grupo $usuario
 	  			existeUsuario
 	  			if [ $? -eq 0 ]
 	  			 then
-	  				echo ""
-	  				echo "El Usuario "$usuario" en el grupo "$grupo" fue creado"
-	  				echo""
-	  				pausa	
-	  			else
-	  				echo ""
-	  				echo "ERROR AL CREAR AL USUARIO"
-	  				echo ""
+	  				usuarioCreado
+	  			 else
+	  				errorCrearUsuario
 	  			fi
 	  		fi
 	  	else
-	  		echo""
-	  		echo "ERROR AL CREAR EL GRUPO"
-	  		echo""
+	  		errorCrearGrupo
 	   	fi
 	  else
 	  	echo""
+	  	read -p "Ingrese Nombre de Usuario para el grupo "$grupo" => " usuario 
+	  	echo""
+	  	existeUsuario
+	  	if [ $? -eq 0 ]
+	  	 then
+	  		usuarioYaexiste
+	  	else
+	  		sudo useradd -g $grupo $usuario
+	  		existeUsuario
+	  		if [ $? -eq 0 ]
+	  		 then
+	  			usuarioCreado	
+	  		else
+	  			errorUsuario
+	  		fi
+	  	fi
+  	  fi
+	;;
+	2)grupo="Medicos"
+	  existeGrupo
+	  if [ $? -ne 0 ]
+	   then
+	  	sudo groupadd $grupo
+	  	existeGrupo
+	  	if [ $? -eq 0 ]
+	  	 then
+	  		echo""
 	  		read -p "Ingrese Nombre de Usuario para el grupo "$grupo" => " usuario 
 	  		echo""
 	  		existeUsuario
 	  		if [ $? -eq 0 ]
 	  		 then
-	  			echo""
-	  			echo "EL USUARIO "$usuario" YA EXISTE"
-	  			echo ""
-	  			pausa
+	  			usuarioYaexiste
 	  		else
 	  			sudo useradd -g $grupo $usuario
 	  			existeUsuario
 	  			if [ $? -eq 0 ]
 	  			 then
-	  				echo ""
-	  				echo "El Usuario "$usuario" en el grupo "$grupo" fue creado"
-	  				echo "" 
-	  				echo ""
-	  				pausa	
-	  			else
-	  				echo ""
-	  				echo "ERROR AL CREAR EL USUARIO"
-	  				echo ""
+	  				usuarioCreado
+	  			 else
+	  				errorCrearUsuario
 	  			fi
 	  		fi
+	  	else
+	  		errorCrearGrupo
+	   	fi
+	  else
+	  	echo""
+	  	read -p "Ingrese Nombre de Usuario para el grupo "$grupo" => " usuario 
+	  	echo""
+	  	existeUsuario
+	  	if [ $? -eq 0 ]
+	  	 then
+	  		usuarioYaexiste
+	  	else
+	  		sudo useradd -g $grupo $usuario
+	  		existeUsuario
+	  		if [ $? -eq 0 ]
+	  		 then
+	  			usuarioCreado	
+	  		else
+	  			errorUsuario
+	  		fi
+	  	fi
   	  fi
 	;;
-	2)
-	;;
 esac
-
 }
