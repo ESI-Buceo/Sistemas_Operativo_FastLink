@@ -13,25 +13,14 @@ op=-1
 
 while [ $op != 0 ]
  do
- 	clear
- 	echo ""
- 	echo ""
- 	echo ""
- 	echo " Menu Principal"
- 	echo "-----------------"
- 	echo ""
- 	echo "  1 - Usuarios"
- 	echo "  2 - Grupos"
- 	echo "  0 - Salir"
- 	echo ""
- 	echo "" 
+ 	menuP
  	read -p "Ingrese su opcion: " op
 
  	case $op in
  		
  		1)menUsuario
 		;;
-		2)menuGrupo
+		2)menuGrupos
 		;;
 		0)echo ""
 		  echo ""

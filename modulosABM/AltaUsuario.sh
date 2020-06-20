@@ -1,4 +1,4 @@
-pruebaAltaUsuario(){
+AltaUsuario(){
 
 clear
 echo ""

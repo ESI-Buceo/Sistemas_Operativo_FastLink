@@ -24,3 +24,15 @@ erroCrearGrupo(){
 	echo""
 	pausa
 }
+grupoYaexiste(){
+	echo""
+	echo "El Grupo "$grupo" *** YA EXISTE ***"
+	echo ""
+	pausa
+}
+grupoCreado(){
+	echo ""
+	echo "El grupo "$grupo" fue creado"
+	echo""
+	pausa
+}
