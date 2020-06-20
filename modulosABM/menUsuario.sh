@@ -6,7 +6,7 @@ do
 	case $op in
 		1) AltaUsuario
 		;;
-		2) bajaUsuario
+		2) bajaUsuarios
 		;;
 		2) modificaUsuario
 		;;

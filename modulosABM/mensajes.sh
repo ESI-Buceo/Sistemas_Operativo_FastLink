@@ -36,3 +36,14 @@ grupoCreado(){
 	echo""
 	pausa
 }
+MsjEliminarUsuario(){
+	
+	echo ""
+	echo ""
+	echo " * * * * * ATENCION  * * * * *"
+	echo "  DECEA ELIMINAR EL USUARIO "
+	echo "  =====> "$usuario" <=====  "
+	echo ""
+	echo ""
+}
+

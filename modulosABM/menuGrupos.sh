@@ -8,7 +8,7 @@ do
 	case $op in
 		1)altagrupos
 		;;
-		2)
+		2)bajagrupos
 		;;
 		3)
 		;;
