@@ -1,5 +1,5 @@
 
-terexisteGrupo(){
+existeGrupo(){
 	cut -d":" -f1 /etc/group | grep $grupo -w -q
 }
 

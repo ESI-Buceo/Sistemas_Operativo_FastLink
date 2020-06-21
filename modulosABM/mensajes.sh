@@ -18,7 +18,7 @@ errorCrearUsuario(){
 	echo ""
 	pause
 }
-erroCrearGrupo(){
+errorCrearGrupo(){
 	echo""
 	echo "ERROR AL CREAR EL GRUPO"
 	echo""
@@ -44,6 +44,11 @@ MsjEliminarUsuario(){
 	echo "  DECEA ELIMINAR EL USUARIO "
 	echo "  =====> "$usuario" <=====  "
 	echo ""
+	echo ""
+}
+MsjErrorEliminarUsuarios(){
+	echo ""
+	echo "ERROR AL ELIMINAR USUARIO O DIRECTORIO"
 	echo ""
 }
 

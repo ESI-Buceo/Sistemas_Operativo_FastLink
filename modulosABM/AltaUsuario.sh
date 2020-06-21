@@ -14,8 +14,8 @@ echo ""
 read -p "Ingrese la opcion => " op
 echo ""
 case $op in
-	1)grupo="Gestores"
-	  existeGrupo
+	1) grupo="Gestores"
+	   existeGrupo
 	  if [ $? -ne 0 ]
 	   then
 	  	sudo groupadd $grupo
@@ -30,7 +30,7 @@ case $op in
 	  		 then
 	  			usuarioYaexiste
 	  		else
-	  			sudo useradd -g $grupo $usuario
+	  			creaUsuario
 	  			existeUsuario
 	  			if [ $? -eq 0 ]
 	  			 then
@@ -51,7 +51,7 @@ case $op in
 	  	 then
 	  		usuarioYaexiste
 	  	else
-	  		sudo useradd -g $grupo $usuario
+	  		creaUsuario
 	  		existeUsuario
 	  		if [ $? -eq 0 ]
 	  		 then
@@ -78,7 +78,7 @@ case $op in
 	  		 then
 	  			usuarioYaexiste
 	  		else
-	  			sudo useradd -g $grupo $usuario
+	  			creaUsuario
 	  			existeUsuario
 	  			if [ $? -eq 0 ]
 	  			 then
@@ -99,7 +99,7 @@ case $op in
 	  	 then
 	  		usuarioYaexiste
 	  	else
-	  		sudo useradd -g $grupo $usuario
+	  		creaUsuario
 	  		existeUsuario
 	  		if [ $? -eq 0 ]
 	  		 then
