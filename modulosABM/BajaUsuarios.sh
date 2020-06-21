@@ -11,10 +11,10 @@ bajaUsuarios(){
 		menuBajaUsuarios
 		read -p "Ingrese Opcion => " op
 		case $op in
-			1)
+			1)borraDirectorioUsuario
 			;;
 
-			2)
+			2)borraUsuario
 			;;
 
 			9)menuU

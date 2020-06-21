@@ -8,34 +8,32 @@ do
 done
 
 #Menu Principal
+	op=-1
 
-op=-1
+	while [ $op != 0 ]
+ 	do
+ 		menuP
+ 		read -p "Ingrese su opcion: " op
 
-while [ $op != 0 ]
- do
- 	menuP
- 	read -p "Ingrese su opcion: " op
-
- 	case $op in
- 		
- 		1)menUsuario
-		;;
-		2)menuGrupos
-		;;
-		0)echo ""
-		  echo ""
-		  echo ""
-		  echo "FIN DE LA APLICACION"
-		  echo ""
-		  echo "" 
-		  exit ;;
-		*)echo ""
-		  echo ""	
-		  echo "Opcion Incorrecta"
-	      pausa
-		  main	
-		;;
- 	esac
-done
+ 		case $op in
+ 			1)menUsuario
+			;;
+			2)menuGrupos
+			;;
+			0)echo ""
+			  echo ""
+			  echo ""
+				  echo "FIN DE LA APLICACION"
+				  echo ""
+			  echo "" 
+			  exit ;;
+			*)echo ""
+			  echo ""	
+			  echo "Opcion Incorrecta"
+			  pausa
+			  main	
+			;;
+	 	esac
+	done
 }
 main
