@@ -8,7 +8,7 @@ do
 		;;
 		2) bajaUsuarios
 		;;
-		2) modificaUsuario
+		3) modificaUsuario
 		;;
 		9) main
 		;;
