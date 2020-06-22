@@ -6,18 +6,18 @@ existeGrupo
 if [ $? -eq 0 ]
  then
   	grupoYaexiste
-  	menugrupo
+  	menuGrupos
 else
 	sudo groupadd $grupo
 	grupoYaexiste
-	menugrupo
+	menuGrupos
 	if [ $? -eq 0 ]
 	 then
 		grupoCreado
-		menugrupo
+		menuGrupos
 	else
 		errorCrearGrupo
-		menugrupo	
+		menuGrupos	
 	fi
  fi
 }
